@@ -68,7 +68,7 @@ const MyProfileCounterpartiesTable = ({
     if (!isFetching && data.length === 0) {
         if (searchValue === '') return <MyProfileCounterpartiesEmpty />;
         return (
-            <Text className='pt-12' weight='bold'>
+            <Text className='pt-12' weight={isMobile ? 'normal' : 'bold'}>
                 <Localize i18n_default_text='There are no matching name.' />
             </Text>
         );
